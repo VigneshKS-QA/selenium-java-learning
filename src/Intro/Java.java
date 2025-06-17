@@ -65,7 +65,11 @@ public class Java {
 	String[] city= {"Mandya", "Bang", "Mysore"};
 	List<String> cities = Arrays.asList(city);
 	System.out.println(cities.contains("Bang"));
+	System.out.println(cities);
 	
+	for(int i=0; i<city.length; i++) {
+		System.out.println(city[i]);
+	}
 	
 	
 	

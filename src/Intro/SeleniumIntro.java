@@ -13,7 +13,7 @@ public class SeleniumIntro {
 	//System.setProperty("webdriver.chrome.driver", "E:/Selenium/chrome-win64 (1)/chrome-win64/chrome.exe");
     //WebDriver driver= new ChromeDriver();
 	
-	System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
+	//System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
 	WebDriver driver = new EdgeDriver();
 	
 	//System.setProperty("webdriver.gecko.driver", "E:/Selenium/geckodriver.exe");

@@ -10,7 +10,7 @@ public class StaticDropdown {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
+		//System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		
@@ -24,7 +24,7 @@ public class StaticDropdown {
 		dropdown.selectByValue("INR");
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 		
-		
+		//if its not static/select tag dopdown store the options in List<WebElemets>.... covered in Autosuggesteddropdown class
 		driver.close();
 	}
 

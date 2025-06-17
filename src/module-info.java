@@ -11,4 +11,5 @@ module Introduction {
 	requires org.testng;
 	requires org.seleniumhq.selenium.api;
 	requires org.seleniumhq.selenium.support;
+	requires org.apache.commons.io;
 }

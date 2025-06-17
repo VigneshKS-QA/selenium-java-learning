@@ -21,7 +21,9 @@ public class DynamicDropdown {
 		//driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();		//(//a[@value='MAA'])[2] is index method, have same element in diff dropdown so used index 2
 		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();	//parent child relationship (without index)
 		
+		driver.findElement(By.cssSelector(".ui-state-default.ui-state-active")).click();
 		
+		Thread.sleep(2000);
 		driver.close();
 
 	}

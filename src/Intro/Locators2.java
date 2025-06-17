@@ -13,7 +13,7 @@ public class Locators2 {
 		
 		String name="rahul";
 		
-		System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
+		//System.setProperty("webdriver.edge.driver", "E:/Selenium/msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
