@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!--package level execution/ runs all class inside the package -->
+  <!--<test thread-count="5" name="Test">
+   <packages>
+   	<package name="Pack2">
+   	</package>
+   </packages>
+  </test>
+  -->
+  <test name="2">
+  <classes>
+  	<class name="Pack2.Test3">
+  		<methods>
+  			<exclude name="DemoS.*"></exclude>
+  		</methods>
+  	
+  	</class>
+  </classes>
+  </test>
+</suite> <!-- Suite -->
