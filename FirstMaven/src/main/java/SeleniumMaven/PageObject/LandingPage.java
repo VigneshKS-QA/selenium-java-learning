@@ -24,13 +24,26 @@ public class LandingPage {
 	@FindBy(id="login")
 	WebElement loginButton;
 	
-	public void loginApplication(String username, String pass) {
+	@FindBy(css="[class*='flyIn']")
+	WebElement errorMsg;
+	
+	
+	
+	public ProductCatalog loginApplication(String username, String pass) {
 		userName.sendKeys(username);
 		password.sendKeys(pass);
 		loginButton.click();
+		ProductCatalog productCatalog =new ProductCatalog(driver);
+		return productCatalog;
 	}
+	
+	
 	public void goTo() {
 		driver.get("https://rahulshettyacademy.com/client");
+	}
+	
+	public String errorMsg() {
+		return errorMsg.getText();
 	}
 	
 }

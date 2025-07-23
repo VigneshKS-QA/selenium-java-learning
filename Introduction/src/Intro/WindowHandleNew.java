@@ -27,7 +27,7 @@ public class WindowHandleNew {
 		String parent =it.next();
 		String child =it.next();
 		driver.switchTo().window(child);
-		driver.get("https://rahulshettyacademy.com/");	//entered URL in new blank tag
+		driver.get("https://rahulshettyacademy.com/");	//entered URL in new blank tab
 		
 		String nameText =driver.findElements(By.xpath("//a[contains(@href, 'https://courses.rahulshettyacademy.com/p')]")).get(1).getText();
 		driver.switchTo().window(parent);

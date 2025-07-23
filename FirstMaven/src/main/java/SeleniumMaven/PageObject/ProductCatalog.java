@@ -23,13 +23,41 @@ public class ProductCatalog extends AbstractComponents{
 	@FindBy(css="button.btn.w-10.rounded")
 	List<WebElement> addToCartButtons;
 	
+	@FindBy(css=".ng-animating")
+	WebElement animation;
+	
+
+	
 	By addToCart =By.cssSelector("button.btn.w-10.rounded");
+	By productName = By.xpath("./ancestor::div[contains(@class,'card')]//h5/b");
+	By toastmsg = By.cssSelector("#toast-container");
+	
+	
+	
 	public List<WebElement> getProductList() {
 		
-		waintUntilElementToAppear(addToCart);
+		waitUntilElementToAppear(addToCart);
 		return addToCartButtons;
 	}
 	
+	public CartPage addProductToCart(String productNameToAdd) throws InterruptedException {
+		addToCartButtons.stream()
+	    .filter(s ->s.findElement(productName).getText().equalsIgnoreCase(productNameToAdd))
+	    .findFirst()
+	    .ifPresent(Buttons->Buttons.click()); // Clicks the matching "Add To Cart" button
+		
+		waitUntilElementToAppear(toastmsg);
+		Thread.sleep(3000);
+		//waitUntilElementToDisappear(animation);
+		CartPage cartPage= new CartPage(driver);
+		return cartPage;
+	}
+	
+	
+	
+	
+	
+
 
 	
 }

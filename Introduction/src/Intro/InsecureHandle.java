@@ -28,7 +28,7 @@ public class InsecureHandle {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().deleteCookieNamed("nameOfCookie");  //this will help to back go back to login when we click any link 
+		driver.manage().deleteCookieNamed("nameOfCookie");  //this will help to go back to login when we click any link 
 		
 		driver.get("https://expired.badssl.com/");
 		System.out.println(driver.getTitle());
